@@ -71,6 +71,13 @@ class AppTextStyles {
     fontFamily: "AirbnbCereal",
   );
 
+  static TextStyle font15Primer = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.CPrimary,
+    fontFamily: "AirbnbCereal",
+  );
+
   static TextStyle font36WhiteMedium = TextStyle(
     fontSize: 36.sp,
     fontWeight: FontWeightHelper.medium,

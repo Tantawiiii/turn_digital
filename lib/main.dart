@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:turn_digital/core/constant/colors_code.dart';
 
 import 'core/constant/strings_text.dart';
 import 'core/routing/app_routes.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: AppTexts.TAppName,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColors.CPrimary),
           useMaterial3: true,
         ),
         onGenerateRoute: appRouter.generateRoute,
