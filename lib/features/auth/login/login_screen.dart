@@ -1,3 +1,4 @@
+import 'package:bounce/bounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:turn_digital/core/constant/strings_text.dart';
@@ -9,6 +10,8 @@ import 'package:turn_digital/core/constant/colors_code.dart';
 import 'package:turn_digital/core/helper/validation_utils.dart';
 import 'package:turn_digital/core/widgets/custom_button.dart';
 import 'package:turn_digital/core/widgets/custom_text_field.dart';
+
+import '../../../core/routing/routes.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -103,8 +106,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(AppTexts.tLoginDontAccount),
-                      TextButton(
-                        onPressed: () {},
+                      Bounce(
+                        onTap: () {
+                          Navigator.pushNamed(context, RRoutes.rRegister);
+                        },
                         child: const Text(
                           AppTexts.tSignUp,
                           style: TextStyle(color: AppColors.CPrimary),
