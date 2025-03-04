@@ -15,7 +15,10 @@ class AppTexts{
   static const String TNext = "Next";
   static const String TGetStarted = "GetStarted";
   static const String tSignIn = "Sign in";
+  static const String tOr = "OR";
+  static const String tSIGN = "SIGN IN";
   static const String tSignUp = "Sign up";
+  static const String tSIGNup = "SIGN UP";
   static const String tEmailHint = "abc@email.com";
   static const String tPasswordHint = "Your password";
   static const String tRememberMe = "Remember Me";

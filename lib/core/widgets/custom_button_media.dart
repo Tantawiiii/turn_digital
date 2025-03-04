@@ -7,17 +7,15 @@ import 'package:turn_digital/core/constant/colors_code.dart';
 import 'package:turn_digital/core/helper/spacing.dart';
 import 'package:turn_digital/core/theme/texts_styles.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButtonMedia extends StatelessWidget {
   final String text;
-  final VoidCallback onPressed;
-  final double? width;
+  final String  AssetsPATH;
 
 
-  const CustomButton({
+
+  const CustomButtonMedia({
     super.key,
-    required this.text,
-    required this.onPressed,
-    this.width,
+    required this.text, required this.AssetsPATH,
   });
 
   @override
@@ -25,32 +23,30 @@ class CustomButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: Bounce(
-        onTap: onPressed,
+        onTap: (){},
         child: Container(
-          width: width ?? double.infinity,
+          width: double.infinity,
           padding: const EdgeInsets.symmetric(vertical: 14),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
-            color: AppColors.CPrimary,
+            color: AppColors.CWhite,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
-              Expanded(
-                child: Text(
-                  text,
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.font18WhiteMedium,
-                ),
+              SvgPicture.asset(
+                AssetsPATH,
+                width: 28.w,
+                height: 28.h,
+              ),
+              horizontalSpace(20),
+              Text(
+                text,
+                textAlign: TextAlign.center,
+                style: AppTextStyles.font14DarkLight,
               ),
 
-              SvgPicture.asset(
-                AssetsPATH.iArrow,
-                width: 32.w,
-                height: 32.h,
-              ),
-              horizontalSpace(10),
 
             ],
           ),
