@@ -18,6 +18,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.17
   flutter_bloc: ^9.1.0
+  bounce: ^1.0.2
 
 dev_dependencies:
   flutter_test:
@@ -33,6 +34,14 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/icons/
     - assets/images/
     - assets/svgs/
+  fonts:
+    - family: AirbnbCereal
+      fonts:
+        - asset: fonts/airbnb/AirbnbCereal_W_Bd.otf
+        - asset: fonts/airbnb/AirbnbCereal_W_Bk.otf
+        - asset: fonts/airbnb/AirbnbCereal_W_Blk.otf
+        - asset: fonts/airbnb/AirbnbCereal_W_Lt.otf
+        - asset: fonts/airbnb/AirbnbCereal_W_Md.otf
+        - asset: fonts/airbnb/AirbnbCereal_W_XBd.otf

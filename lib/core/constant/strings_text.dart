@@ -1,15 +1,30 @@
 
 
-class TTexts{
+class AppTexts{
 
-  static const String TAppName = "Marketi";
+  static const String TAppName = "Turn Digital";
 
-  static const String TOnBoardTitle1 = "Welcome to Marketi";
-  static const String TOnBoardTitle2 = "Easy to Buy";
-  static const String TOnBoardTitle3 = "Wonderful User Experience";
+  static const String TOnBoardTitle1 = " Explore Upcoming and Nearby Events ";
+  static const String TOnBoardTitle2 = " Web Have Modern Events Calendar Feature";
+  static const String TOnBoardTitle3 = "  To Look Up More Events or Activities Nearby By Map";
 
 
-  static const String TOnBoardDes1 = "Discover a world of endless possibilities and shop from the comfort of your fingertips Browse through a wide range of products, from fashion and electronics to home.";
-  static const String TOnBoardDes2 = "Find the perfect item that suits your style and needs With secure payment options and fast delivery, shopping has never been easier.";
-  static const String TOnBoardDes3 = "Start exploring now and experience the convenience of online shopping at its best.";
+  static const String TOnBoardDes1 = " In publishing and graphic design, Lorem is a placeholder text commonly.";
+
+  static const String TSkip = "Skip";
+  static const String TNext = "Next";
+  static const String TGetStarted = "GetStarted";
+  static const String tSignIn = "Sign in";
+  static const String tOr = "OR";
+  static const String tSIGN = "SIGN IN";
+  static const String tSignUp = "Sign up";
+  static const String tSIGNup = "SIGN UP";
+  static const String tEmailHint = "abc@email.com";
+  static const String tPasswordHint = "Your password";
+  static const String tRememberMe = "Remember Me";
+  static const String tForgotPassword = "Forgot Password?";
+  static const String tLoginGoogle = "Login with Google";
+  static const String tLoginFacebook= "Login with Facebook";
+  static const String tLoginDontAccount = "Don’t have an account?";
+
 }
