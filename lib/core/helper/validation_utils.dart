@@ -41,7 +41,7 @@ class ValidationUtils {
     return null;
   }
 
-  static String? validateConfirmPassword(String? value, String password) {
+  static String? validateConfirmPassword(String? value, String? password) {
     if (value != password) {
       return 'Passwords do not match';
     }

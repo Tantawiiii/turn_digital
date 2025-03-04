@@ -35,6 +35,7 @@ class AssetsPATH {
   static const String iUser = "assets/svgs/user.svg";
   static const String iHidden = "assets/svgs/Hidden.svg";
   static const String iHiddenOn = "assets/svgs/Hidden_on.svg";
+  static const String iArrowLeft = "assets/svgs/arrow-left.svg";
 
 
 }

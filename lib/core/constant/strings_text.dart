@@ -27,4 +27,12 @@ class AppTexts{
   static const String tLoginFacebook= "Login with Facebook";
   static const String tLoginDontAccount = "Don’t have an account?";
 
+
+  static const String tFullName = "Full name";
+  static const String tConfirmPass = "Confirm password";
+  static const String tAlreadyAccount = "Already have an account?";
+
+
+
+
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:turn_digital/core/routing/routes.dart';
+import 'package:turn_digital/features/auth/register/view/register_screen.dart';
 import 'package:turn_digital/features/onboarding/view/on_boarding_screen.dart';
 
 import '../../features/auth/login/login_screen.dart';
@@ -25,6 +26,9 @@ class AppRouter {
         );
       case RRoutes.rLogin:
         return MaterialPageRoute(builder: (_) => LoginScreen());
+
+        case RRoutes.rRegister:
+        return MaterialPageRoute(builder: (_) => RegisterScreen());
       default:
         return MaterialPageRoute(
           builder:
