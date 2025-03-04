@@ -108,7 +108,8 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Text(AppTexts.tLoginDontAccount),
                       Bounce(
                         onTap: () {
-                          Navigator.pushNamed(context, RRoutes.rRegister);
+                         // Navigator.pushNamed(context, RRoutes.rRegister);
+                          Navigator.pushNamed(context, RRoutes.rOtp);
                         },
                         child: const Text(
                           AppTexts.tSignUp,

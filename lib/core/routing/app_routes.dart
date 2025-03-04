@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:turn_digital/core/routing/routes.dart';
+import 'package:turn_digital/features/auth/otp/cubit/otp_cubit.dart';
+import 'package:turn_digital/features/auth/otp/view/otp_screen.dart';
 import 'package:turn_digital/features/auth/register/view/register_screen.dart';
 import 'package:turn_digital/features/onboarding/view/on_boarding_screen.dart';
 
@@ -28,7 +30,17 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => LoginScreen());
 
         case RRoutes.rRegister:
-        return MaterialPageRoute(builder: (_) => RegisterScreen());
+        return MaterialPageRoute(
+            builder: (_) => RegisterScreen()
+        );
+    case RRoutes.rOtp:
+    return MaterialPageRoute(
+      builder: (_) => BlocProvider<OtpCubit>(
+        create: (context) => OtpCubit(),
+        child: OtpScreen(),
+      ),
+    );
+
       default:
         return MaterialPageRoute(
           builder:

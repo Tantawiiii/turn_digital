@@ -14,6 +14,7 @@ class AppTexts{
   static const String TSkip = "Skip";
   static const String TNext = "Next";
   static const String TGetStarted = "GetStarted";
+  static const String tContinue = "Continue";
   static const String tSignIn = "Sign in";
   static const String tOr = "OR";
   static const String tSIGN = "SIGN IN";
@@ -31,7 +32,9 @@ class AppTexts{
   static const String tFullName = "Full name";
   static const String tConfirmPass = "Confirm password";
   static const String tAlreadyAccount = "Already have an account?";
-
+  static const String tVerificationCode = "Verification";
+  static const String tVerificationCodeSent = "We’ve send you the verification\n code on +20 109 4642 577";
+  static const String tReSentCode = "Re-send code in ";
 
 
 
