@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kf_drawer/kf_drawer.dart';
+import 'package:turn_digital/core/constant/colors_code.dart';
 
 class HomeScreen extends KFDrawerContent {
   HomeScreen({Key? key});
@@ -12,7 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: AppColors.CWhite,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,

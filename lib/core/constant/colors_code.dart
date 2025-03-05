@@ -11,7 +11,7 @@ class AppColors {
   static const Color CardMusic= Color(0Xff524037);
   static const Color CardFOOD= Color(0Xff29D697);
   static const Color HINTcOLOR= Color(0Xff747688);
-  static const Color ICONS= Color(0Xff807A7A);
+  static const Color ICONS= Color(0Xff767676);
   static const Color BORDER= Color(0XffE4DFDF);
   static const Color tColors= Color(0Xff120D26);
 

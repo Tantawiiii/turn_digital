@@ -45,7 +45,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       controller: widget.controller,
       obscureText: _obscureText,
       validator: widget.validator,
-      decoration: InputDecoration(
+            decoration: InputDecoration(
         hintText: widget.hintText,
         hintStyle: AppTextStyles.font14WhiteMedium,
         prefixIcon: Padding(

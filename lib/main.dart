@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         onGenerateRoute: appRouter.generateRoute,
-        initialRoute: RRoutes.rSplash,
+       // initialRoute: RRoutes.rSplash,
+        initialRoute: RRoutes.rMain,
       ),
     );
   }
