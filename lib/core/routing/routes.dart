@@ -7,5 +7,6 @@ class RRoutes {
   static const rRegister = "/register";
   static const rOtp = "/otp";
   static const rHome = "/home";
+  static const rMain = "/main";
 
 }

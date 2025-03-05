@@ -33,8 +33,8 @@ class AppTexts{
   static const String tConfirmPass = "Confirm password";
   static const String tAlreadyAccount = "Already have an account?";
   static const String tVerificationCode = "Verification";
-  static const String tVerificationCodeSent = "We’ve send you the verification\n code on +20 109 4642 577";
-  static const String tReSentCode = "Re-send code in ";
+  static const String tVerificationCodeSent = "We’ve send you the verification\ncode on +20 109 4642 577";
+  static const String tReSentCode = "Re-send code in  ";
 
 
 

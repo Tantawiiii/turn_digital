@@ -4,6 +4,8 @@ import 'package:turn_digital/core/routing/routes.dart';
 import 'package:turn_digital/features/auth/otp/cubit/otp_cubit.dart';
 import 'package:turn_digital/features/auth/otp/view/otp_screen.dart';
 import 'package:turn_digital/features/auth/register/view/register_screen.dart';
+import 'package:turn_digital/features/home/home/view/home_screen.dart';
+import 'package:turn_digital/features/home/home/view/main_screen.dart';
 import 'package:turn_digital/features/onboarding/view/on_boarding_screen.dart';
 
 import '../../features/auth/login/login_screen.dart';
@@ -40,7 +42,11 @@ class AppRouter {
         child: OtpScreen(),
       ),
     );
+      case RRoutes.rHome:
+        return MaterialPageRoute(builder: (_) => HomeScreen());
 
+        case RRoutes.rMain:
+        return MaterialPageRoute(builder: (_) => MainScreen());
       default:
         return MaterialPageRoute(
           builder:
