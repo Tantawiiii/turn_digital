@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _login() {
     if (_formKey.currentState?.validate() ?? false) {
-      Navigator.pushReplacementNamed(context, '/home');
+      Navigator.pushNamed(context, RRoutes.rMain);
     }
   }
 
@@ -108,8 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       const Text(AppTexts.tLoginDontAccount),
                       Bounce(
                         onTap: () {
-                         // Navigator.pushNamed(context, RRoutes.rRegister);
-                          Navigator.pushNamed(context, RRoutes.rOtp);
+                          Navigator.pushNamed(context, RRoutes.rRegister);
                         },
                         child: const Text(
                           AppTexts.tSignUp,
