@@ -2,6 +2,7 @@ import 'package:bounce/bounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../../../core/constant/assets_path.dart';
@@ -16,6 +17,8 @@ import 'build_custom_search_bar.dart';
 import 'event_card.dart';
 
 class HomeBody extends StatelessWidget {
+  const HomeBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -36,10 +39,16 @@ class HomeBody extends StatelessWidget {
                     ),
                     Bounce(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => EventsListScreen()),
-                        );
+                          PersistentNavBarNavigator.pushNewScreen(
+                            context,
+                            screen: BlocProvider.value(
+                              value: context.read<EventCubit>(),
+                              child: EventsListScreen(),
+                            ),
+                            withNavBar: false,
+                            pageTransitionAnimation: PageTransitionAnimation.fade,
+                          );
+
                       },
                       child: Row(
                         children: [

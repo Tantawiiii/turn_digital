@@ -28,9 +28,12 @@ class AssetsPATH {
   static const String iEmail = "assets/svgs/Message.svg";
   static const String iMusic = "assets/svgs/music_icon.svg";
   static const String iNavMenu = "assets/svgs/nav_menu.svg";
+  static const String iMenuDots = "assets/svgs/dots.svg";
   static const String iNotfiyCircle = "assets/svgs/notification.svg";
   static const String iProfile = "assets/svgs/Profile.svg";
   static const String iSearch = "assets/svgs/search.svg";
+  static const String iSearchDark = "assets/svgs/search_dark.svg";
+  static const String iCloseDark = "assets/svgs/close.svg";
   static const String iSettings = "assets/svgs/settings.svg";
   static const String iSports = "assets/svgs/sports_icon.svg";
   static const String iUpgrade = "assets/svgs/upgrade_pro.svg";

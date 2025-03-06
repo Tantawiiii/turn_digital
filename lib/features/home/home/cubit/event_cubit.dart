@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:turn_digital/core/constant/apis_const.dart';
+import 'package:turn_digital/features/home/home/data/event_details_model.dart';
 import '../../../../core/helper/dio_helper.dart';
 import '../data/event_model.dart';
 import 'event_state.dart';
@@ -51,4 +52,26 @@ class EventCubit extends Cubit<EventState> {
       emit(EventError('An error occurred'));
     }
   }
+
+  Future<void> fetchEventById(int eventId) async {
+    try {
+      emit(EventDetailsLoading());
+
+      final response = await DioHelper.getData(
+        url: 'events/$eventId',
+      );
+
+      if (response!.statusCode == 200 && response.data != null && response.data['success'] == true) {
+        final eventData = response.data['data'];
+        final singleEvent = EventDetailsModel.fromJson(eventData);
+
+        emit(EventDetailsLoaded(singleEvent));
+      } else {
+        emit(EventDetailsError('Failed to load event details.'));
+      }
+    } catch (e) {
+      emit(EventDetailsError(e.toString()));
+    }
+  }
+
 }
