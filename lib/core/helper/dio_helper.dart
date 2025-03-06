@@ -5,25 +5,24 @@ import 'package:turn_digital/core/constant/apis_const.dart';
 
 class DioHelper {
   static final Dio _dio = Dio(
-      BaseOptions(
-        baseUrl: ApisClient.BASE_URL,
-        connectTimeout: const Duration(seconds: 10),
-        receiveTimeout: const Duration(seconds: 10),
-        headers: {'Accept': 'application/json'},
-      ),
-    )
-    ..interceptors.add(
-      PrettyDioLogger(
-        requestHeader: true,
-        requestBody: true,
-        responseBody: true,
-        responseHeader: false,
-        error: true,
-        compact: true,
-        maxWidth: 90,
-        enabled: kDebugMode,
-      ),
-    );
+    BaseOptions(
+      baseUrl: ApisClient.BASE_URL,
+      connectTimeout: const Duration(seconds: 10),
+      receiveTimeout: const Duration(seconds: 10),
+      headers: {'Accept': 'application/json'},
+    ),
+  )..interceptors.add(
+    PrettyDioLogger(
+      requestHeader: true,
+      // requestBody: true,
+      // responseBody: true,
+      responseHeader: false,
+      error: true,
+      compact: true,
+      maxWidth: 90,
+      enabled: kDebugMode,
+    ),
+  );
 
   static Future<Response?> postData({
     required String url,
@@ -31,6 +30,18 @@ class DioHelper {
   }) async {
     try {
       Response response = await _dio.post(url, data: data);
+      return response;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  static Future<Response?> getData({
+    required String url,
+    Map<String, dynamic>? queryParams,
+  }) async {
+    try {
+      Response response = await _dio.get(url, queryParameters: queryParams);
       return response;
     } catch (e) {
       return null;

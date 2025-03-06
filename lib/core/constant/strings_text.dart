@@ -35,6 +35,15 @@ class AppTexts{
   static const String tVerificationCode = "Verification";
   static const String tVerificationCodeSent = "We’ve send you the verification\ncode on +20 109 4642 577";
   static const String tReSentCode = "Re-send code in  ";
+  static const String tNewYork =   "New York, USA";
+  static const String tCurrentLocation =   "Current Location";
+
+  static const String tUpcomingEvents =   "Upcoming Events";
+  static const String tNearby =   "Nearby You";
+  static const String tSeeAll =   "See All";
+
+
+
 
 
 

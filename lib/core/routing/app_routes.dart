@@ -4,11 +4,12 @@ import 'package:turn_digital/core/routing/routes.dart';
 import 'package:turn_digital/features/auth/otp/cubit/otp_cubit.dart';
 import 'package:turn_digital/features/auth/otp/view/otp_screen.dart';
 import 'package:turn_digital/features/auth/register/view/register_screen.dart';
-import 'package:turn_digital/features/home/home/view/home_screen.dart';
-import 'package:turn_digital/features/home/home/view/main_screen.dart';
 import 'package:turn_digital/features/onboarding/view/on_boarding_screen.dart';
 
 import '../../features/auth/login/login_screen.dart';
+import '../../features/home/home/cubit/event_cubit.dart';
+import '../../features/home/home/presentation/view/home_screen.dart';
+import '../../features/home/home/presentation/view/main_screen.dart';
 import '../../features/onboarding/cubit/onboarding_cubit.dart';
 import '../../features/onboarding/view/splash_screen.dart';
 
@@ -43,10 +44,20 @@ class AppRouter {
       ),
     );
       case RRoutes.rHome:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider<EventCubit>(
+            create: (context) => EventCubit(),
+            child: HomeScreen(),
+          ),
+        );
 
         case RRoutes.rMain:
-        return MaterialPageRoute(builder: (_) => MainScreen());
+          return MaterialPageRoute(
+            builder: (_) => BlocProvider<EventCubit>(
+              create: (context) => EventCubit(),
+              child: MainScreen(),
+            ),
+          );
       default:
         return MaterialPageRoute(
           builder:

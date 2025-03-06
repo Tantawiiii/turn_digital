@@ -87,22 +87,22 @@ class _MainScreenState extends State<MainScreen> {
 
   Widget _buildFooterItem() {
     return Align(
-      alignment: Alignment.bottomCenter,
+      alignment: Alignment.bottomLeft,
       child: Container(
-        width: double.infinity /2,
-        height: 48,
-        margin: EdgeInsets.only(bottom: 16.h),
+        width: 150.w,
+        height: 48.h,
+        margin: EdgeInsets.only(top: 80.h,left: 12.w),
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8),
         decoration: BoxDecoration(
           color: AppColors.CPrimary.withOpacity(0.2),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(AssetsPATH.iUpgrade),
             horizontalSpace(10),
-            Text("Upgrade Pro", style: const TextStyle(color: Colors.white)),
+            Text("Upgrade Pro", style: TextStyle(color: AppColors.CPrimary)),
           ],
         ),
       ),

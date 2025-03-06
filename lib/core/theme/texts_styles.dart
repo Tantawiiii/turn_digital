@@ -49,10 +49,23 @@ class AppTextStyles {
     fontFamily: "AirbnbCereal",
   );
 
-  static TextStyle font14WhiteMedium = TextStyle(
+  static TextStyle font14WhiteDarkMedium = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColors.HINTcOLOR,
+    fontFamily: "AirbnbCereal",
+  );
+  static TextStyle font14WhiteMedium = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.CWhite,
+    fontFamily: "AirbnbCereal",
+  );
+
+  static TextStyle font12WhiteMedium = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.CWhite,
     fontFamily: "AirbnbCereal",
   );
 
