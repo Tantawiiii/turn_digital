@@ -33,12 +33,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController _confirmController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
-  void _register() {
-    if (_formKey.currentState?.validate() ?? false) {
-      Navigator.pushReplacementNamed(context, '/home');
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

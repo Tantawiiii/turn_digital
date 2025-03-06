@@ -8,5 +8,6 @@ class RRoutes {
   static const rOtp = "/otp";
   static const rHome = "/home";
   static const rMain = "/main";
+  static const rEventList= "/eventList";
 
 }

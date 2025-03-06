@@ -15,7 +15,7 @@ class BuildCustomSearchBar extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Container(
-          height: 80.h,
+          height: 100.h,
           padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 2.h),
           decoration: BoxDecoration(
             color: AppColors.CPrimary,
