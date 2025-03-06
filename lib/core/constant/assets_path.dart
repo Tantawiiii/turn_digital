@@ -8,6 +8,7 @@ class AssetsPATH {
 
   static const String pOnboarding1 = "assets/images/img_onboarding_1.png";
   static const String pOnboarding2 = "assets/images/img_onboarding_2.png";
+  static const String pBanner = "assets/images/banner.png";
 
   // Svgs Paths
   static const String iArrow = "assets/svgs/arrow_btn.svg";
@@ -17,6 +18,7 @@ class AssetsPATH {
   static const String iFacebook = "assets/svgs/facebook_icon.svg";
   static const String iGoogle = "assets/svgs/google_icon.svg";
   static const String iFilters = "assets/svgs/filters_icon.svg";
+  static const String iFilterCircle = "assets/svgs/filter-circle.svg";
   static const String iFood = "assets/svgs/food_icon.svg";
   static const String iHelp = "assets/svgs/help-circle.svg";
   static const String iLocation = "assets/svgs/location_pin.svg";

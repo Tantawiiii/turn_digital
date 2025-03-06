@@ -47,7 +47,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
       validator: widget.validator,
             decoration: InputDecoration(
         hintText: widget.hintText,
-        hintStyle: AppTextStyles.font14WhiteMedium,
+        hintStyle: AppTextStyles.font14WhiteDarkMedium,
         prefixIcon: Padding(
           padding: const EdgeInsets.all(12.0),
           child: SvgPicture.asset(
