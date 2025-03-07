@@ -41,6 +41,11 @@ class AssetsPATH {
   static const String iHidden = "assets/svgs/Hidden.svg";
   static const String iHiddenOn = "assets/svgs/Hidden_on.svg";
   static const String iArrowLeft = "assets/svgs/arrow-left.svg";
+  static const String iFav = "assets/svgs/Fav-icon.svg";
+  static const String iDateCard = "assets/svgs/Date.svg";
+  static const String iLocationCard = "assets/svgs/Location.svg";
+  static const String iMassageCircle = "assets/svgs/message-circle.svg";
+  static const String iUserPlus = "assets/svgs/user-plus.svg";
 
 
 }

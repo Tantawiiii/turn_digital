@@ -90,8 +90,22 @@ class AppTextStyles {
     fontFamily: "AirbnbCereal",
   );
 
+  static TextStyle font16DarkLight = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.tColors,
+    fontFamily: "AirbnbCereal",
+  );
+
   static TextStyle font20DarkLight = TextStyle(
     fontSize: 20.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColors.tColors,
+    fontFamily: "AirbnbCereal",
+  );
+
+  static TextStyle font28DarkLight = TextStyle(
+    fontSize: 28.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColors.tColors,
     fontFamily: "AirbnbCereal",

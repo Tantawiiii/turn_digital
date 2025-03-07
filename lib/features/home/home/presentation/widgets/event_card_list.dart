@@ -90,7 +90,8 @@ class EventCardList extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
               ),
               verticalSpace(8),
-              Row(
+              if (eventLocation != null && eventLocation!.isNotEmpty)
+                Row(
                 children: [
                   Icon(Icons.location_on, color: Colors.grey, size: 18),
                   SizedBox(width: 4),

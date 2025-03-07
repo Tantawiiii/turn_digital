@@ -7,6 +7,9 @@ import 'core/routing/app_routes.dart';
 import 'core/routing/routes.dart';
 
 void main() {
+
+  WidgetsFlutterBinding.ensureInitialized();
+
   runApp( MyApp(appRouter: AppRouter(),));
 }
 
@@ -30,8 +33,8 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         onGenerateRoute: appRouter.generateRoute,
-       // initialRoute: RRoutes.rSplash,
-        initialRoute: RRoutes.rMain,
+       initialRoute: RRoutes.rSplash,
+       // initialRoute: RRoutes.rMain,
       ),
     );
   }

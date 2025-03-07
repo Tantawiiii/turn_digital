@@ -12,6 +12,7 @@ import '../../../../../core/helper/spacing.dart';
 import '../../../../../core/theme/texts_styles.dart';
 import '../../cubit/event_cubit.dart';
 import '../../cubit/event_state.dart';
+import '../view/event_details_screen.dart';
 import '../view/get_list_events.dart';
 import 'build_custom_search_bar.dart';
 import 'event_card.dart';
@@ -39,16 +40,15 @@ class HomeBody extends StatelessWidget {
                     ),
                     Bounce(
                       onTap: () {
-                          PersistentNavBarNavigator.pushNewScreen(
-                            context,
-                            screen: BlocProvider.value(
-                              value: context.read<EventCubit>(),
-                              child: EventsListScreen(),
-                            ),
-                            withNavBar: false,
-                            pageTransitionAnimation: PageTransitionAnimation.fade,
-                          );
-
+                        PersistentNavBarNavigator.pushNewScreen(
+                          context,
+                          screen: BlocProvider.value(
+                            value: context.read<EventCubit>(),
+                            child: EventsListScreen(),
+                          ),
+                          withNavBar: false,
+                          pageTransitionAnimation: PageTransitionAnimation.fade,
+                        );
                       },
                       child: Row(
                         children: [
@@ -103,19 +103,38 @@ class HomeBody extends StatelessWidget {
                         );
                       }
                       return SizedBox(
-                        height: 300,
+                        height: 300.h,
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: state.events.length,
                           itemBuilder: (context, index) {
                             final event = state.events[index];
-                            return EventCard(
-                              eventImage: event.picture,
-                              eventTitle: event.title,
-                              eventDate: event.date,
-                              attendees: [event.organizer.picture],
-                              eventLocation: event.address,
-                              numberOfGoing: event.numberOfGoing,
+                            return Bounce(
+                              onTap: () {
+                                PersistentNavBarNavigator.pushNewScreen(
+                                  context,
+                                  screen: BlocProvider(
+                                    create:
+                                        (context) =>
+                                            EventCubit()
+                                              ..fetchEventById(event.eventId),
+                                    child: EventDetailsScreen(
+                                      eventId: event.eventId,
+                                    ),
+                                  ),
+                                  withNavBar: false,
+                                  pageTransitionAnimation:
+                                      PageTransitionAnimation.fade,
+                                );
+                              },
+                              child: EventCard(
+                                eventImage: event.picture,
+                                eventTitle: event.title,
+                                eventDate: event.date,
+                                attendees: [event.organizer.picture],
+                                eventLocation: event.address,
+                                numberOfGoing: event.numberOfGoing,
+                              ),
                             );
                           },
                         ),
