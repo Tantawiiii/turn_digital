@@ -162,12 +162,13 @@ class _EventsListScreenState extends State<EventsListScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (newContext) => BlocProvider.value(
-                          value: context.read<EventCubit>(),
+                        builder: (newContext) => BlocProvider(
+                          create: (context) => EventCubit()..fetchEventById(event.eventId),
                           child: EventDetailsScreen(eventId: event.eventId),
                         ),
                       ),
                     );
+
                   },
                   child: EventCardList(
                     eventImage: event.picture,
