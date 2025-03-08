@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:shimmer/shimmer.dart';
 
 import '../../../../../core/constant/assets_path.dart';
 import '../../../../../core/constant/colors_code.dart';
 import '../../../../../core/constant/strings_text.dart';
+import '../../../../../core/helper/notification_helper.dart';
 import '../../../../../core/helper/spacing.dart';
 import '../../../../../core/theme/texts_styles.dart';
 import '../../cubit/event_cubit.dart';
@@ -20,6 +22,11 @@ import 'event_card.dart';
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});
 
+
+  void _shareEvent(String title, String location, String imageUrl) {
+    String text = '$title\n 📍Location: $location';
+    Share.share(text);
+  }
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -102,6 +109,8 @@ class HomeBody extends StatelessWidget {
                           child: Center(child: Text('No events available')),
                         );
                       }
+
+
                       return SizedBox(
                         height: 300.h,
                         child: ListView.builder(
@@ -109,7 +118,20 @@ class HomeBody extends StatelessWidget {
                           itemCount: state.events.length,
                           itemBuilder: (context, index) {
                             final event = state.events[index];
+
+                            // handel the event localy Notification
+                            NotificationService().scheduleNotification(
+                              id: event.eventId,
+                              title: event.title,
+                              body: event.organizer.name,
+                              eventDateTime: DateTime.parse(event.date),
+                            );
+
+
                             return Bounce(
+                              onLongPress: (TapDownDetails details) {
+                                _shareEvent(event.title, event.address, event.picture);
+                              },
                               onTap: () {
                                 PersistentNavBarNavigator.pushNewScreen(
                                   context,

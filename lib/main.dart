@@ -3,12 +3,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:turn_digital/core/constant/colors_code.dart';
 
 import 'core/constant/strings_text.dart';
+import 'core/helper/notification_helper.dart';
 import 'core/routing/app_routes.dart';
 import 'core/routing/routes.dart';
 
-void main() {
+void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
+  await NotificationService().initNotifications();
+
 
   runApp( MyApp(appRouter: AppRouter(),));
 }
