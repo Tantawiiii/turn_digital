@@ -30,6 +30,8 @@ dependencies:
   persistent_bottom_nav_bar: ^6.2.1
   share_plus: ^10.1.4
   flutter_local_notifications: ^18.0.1
+  flutter_launcher_icons: ^0.14.3
+  permission_handler: ^11.4.0
 
 dev_dependencies:
   flutter_test:
@@ -56,3 +58,4 @@ flutter:
         - asset: fonts/airbnb/AirbnbCereal_W_Lt.otf
         - asset: fonts/airbnb/AirbnbCereal_W_Md.otf
         - asset: fonts/airbnb/AirbnbCereal_W_XBd.otf
+

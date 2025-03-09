@@ -6,6 +6,7 @@ import 'package:turn_digital/core/constant/assets_path.dart';
 import 'package:turn_digital/core/constant/colors_code.dart';
 import 'package:turn_digital/core/helper/spacing.dart';
 import 'package:turn_digital/core/theme/texts_styles.dart';
+import '../../../../../core/routing/routes.dart';
 import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -46,7 +47,14 @@ class _MainScreenState extends State<MainScreen> {
     return KFDrawerItem(
       text: Text(title, style: AppTextStyles.font14DarkLight),
       icon: SvgPicture.asset(iconPath),
-      onPressed: () => _drawerController.close!(),
+      onPressed: () {
+        _drawerController.close!();
+
+        if (title == 'SignOut') {
+          Navigator.pushNamed(context, RRoutes.rLogin);
+
+        }
+      }
     );
   }
 

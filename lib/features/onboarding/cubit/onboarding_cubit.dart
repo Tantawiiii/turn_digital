@@ -21,7 +21,7 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
     currentIndex++;
     pageController.animateToPage(
       currentIndex,
-      duration: Duration(milliseconds: 600),
+      duration: Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
     emit(NextPageState());

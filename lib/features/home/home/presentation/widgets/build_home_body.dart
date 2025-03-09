@@ -136,10 +136,7 @@ class HomeBody extends StatelessWidget {
                                 PersistentNavBarNavigator.pushNewScreen(
                                   context,
                                   screen: BlocProvider(
-                                    create:
-                                        (context) =>
-                                            EventCubit()
-                                              ..fetchEventById(event.eventId),
+                                    create: (context) => EventCubit()..fetchEventById(event.eventId),
                                     child: EventDetailsScreen(
                                       eventId: event.eventId,
                                     ),
