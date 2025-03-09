@@ -147,7 +147,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       message: "OTP Code Successful!",
                       backgroundColor: Colors.green,
                     );
-                    Navigator.pushNamed(context, RRoutes.rHome);
+                    Navigator.pushNamed(context, RRoutes.rMain);
                   } else if (!state.isValid){
                     CustomToast.showToast(
                       message: "OTP Code Failed!",

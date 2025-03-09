@@ -112,7 +112,7 @@ class OnBoardingScreen extends StatelessWidget {
                                           onBoardingList.length,
                                               (i) => AnimatedContainer(
                                             duration:
-                                            Duration(milliseconds: 200),
+                                            Duration(milliseconds: 100),
                                             margin: EdgeInsets.only(right: 5.w),
                                             height: 10.h,
                                             width: cubit.currentIndex == i

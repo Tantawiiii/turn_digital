@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
       HomeBody(),
       Center(child: Text("Search")),
       Center(child: Text("Events")),
-      Center(child: Text("Notifications")),
+      Center(child: Text("Map")),
       Center(child: Text("Profile")),
     ];
   }
